@@ -9,13 +9,12 @@ public class main {
     }
     // função que cácula o fatorial de um inteiro
     public static int fatorial (int n) {
-        int res = n;
-
-        while (n > 1) {
-            res = res * (n-1);
-            n--;
+        if(n==1) {
+            return 1;
         }
-        return res;
+        else {
+            return n * fatorial(n-1);
+        }
     }
     // função que identifica o números pares entre 0 e um inteiro
     public static void mostraPares(int n) {
