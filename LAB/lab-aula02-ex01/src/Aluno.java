@@ -1,37 +1,30 @@
+// Exercício corrigido no lab
 import java.util.Scanner;
-public class Aluno {
-    // declaração de variáveis
-    public String nome;
-    public int matricula;
-    public int periodo;
-    public int np1;
-    public int np2;
-
-    public int calculaMedia(){
-        int md = (this.np1 + this.np2) / 2;
-
-        if(md >= 60)
-            return 0;
-        else
-            return calculaNP3(md);
-    }
-
-    public int calculaNP3 (int media) {
+// - é public
+// + é private
+public class Main {
+    public static void main(String[] args) {
+        Aluno aluno = new Aluno(); // novo objeto
         Scanner entrada = new Scanner(System.in);
-        int mdfinal;
-        int np3;
 
-        System.out.println("Insira a nota da NP3: ");
-        np3 = entrada.nextInt();
+        // entrada de dados
+        System.out.println("Insira o nome do aluno: ");
+        aluno.nome = entrada.next();
 
-        mdfinal = (np3 + media) / 2;
+        System.out.println("Insira a matrícula do aluno: ");
+        aluno.matricula = entrada.nextInt();
 
-        if(mdfinal >= 50)
-            return 0;
-        else
-            return 1;
-    }
-    public String toString(){
-        return "Nome: " + this.nome + " Matrícula: " + this.matricula + " Periodo: " + this.periodo;
+        System.out.println("Insira o periodo do aluno: ");
+        aluno.periodo = entrada.nextInt();
+
+        System.out.println("Insira a nota da NP1: ");
+        aluno.np1 = entrada.nextInt();
+
+        System.out.println("Insira a nota da NP2: ");
+        aluno.np2 = entrada.nextInt();
+
+        aluno.calculaMedia();
+
+        System.out.println(aluno);
     }
 }
