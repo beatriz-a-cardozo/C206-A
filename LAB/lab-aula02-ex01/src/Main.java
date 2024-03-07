@@ -1,3 +1,4 @@
+// Exercício corrigido no lab
 import java.util.Scanner;
 // - é public
 // + é private
@@ -22,11 +23,7 @@ public class Main {
         System.out.println("Insira a nota da NP2: ");
         aluno.np2 = entrada.nextInt();
 
-        // saída de dados - status de aprovação do aluno
-        if(aluno.calculaMedia() == 0)
-            System.out.println(aluno.nome + " aprovado!");
-        else
-            System.out.println(aluno.nome + " reprovado");
+        aluno.calculaMedia();
 
         System.out.println(aluno);
     }
