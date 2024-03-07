@@ -1,5 +1,4 @@
 public class Gato {
-    public Rato rato;
     public String cor;
     public int idade;
     public int velocidade;
